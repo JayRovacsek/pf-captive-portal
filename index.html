@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css" href="captiveportal-style.css"/>                <!-- Standard head definition and settings -->
+    <title>Login</title>
+    </script>
+  </head>
+
+  <body>
+    <div id="Content">
+      <img src="captiveportal-logo.png"/>
+      <form method="post" action="$PORTAL_ACTION$">
+         <input name="auth_user" type="text" placeholder="Username"><br>
+         <input name="auth_pass" type="password" placeholder="Password"><br>
+         <input name="auth_voucher" type="text" placeholder="Auth Voucher (Not Required)"><br>
+         <input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+         <input name="zone" type="hidden" value="$PORTAL_ZONE$">
+         <div id="UserSubmision">
+           <input name="accept" type="submit" value="Continue">
+           <input type="reset">
+         </div>
+      </form>
+    </div>
+  </body>
+
+</html>
