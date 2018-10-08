@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Captive Portal</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="captiveportal-bootstrap.min.css">
+<style>
+@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+ html, body, .container-table {
+    height: 100%;
+    background-color: black;
+}
+.container-table {
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+</style>
+</head>
+    <body>
+        <div class="container container-table">
+            <div class="row vertical-center-row">
+                <div class="text-center col-md-4 col-md-offset-4">
+                    <img src="captiveportal-logo-white.png" style="margin: 10px">
+                    <div class="form-group">
+                    <form method="post" action="$PORTAL_ACTION$">
+                        <input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+
+                        <input name="auth_user" class="form-control" aria-describedby="auth_user_help" placeholder="example_username" type="text">
+
+                        <small id="auth_user_help" class="form-text text-muted">Not required if you have a authentication voucher</small>
+
+                        <input name="auth_pass" class="form-control" aria-describedby="auth_pass_help" placeholder="example_password" type="password">
+
+                        <small id="auth_pass_help" class="form-text text-muted">Not required if you have a authentication voucher</small>
+
+                        <input name="auth_voucher" class="form-control" type="text" placeholder="eg; 0DfRiWuvm2Dj - Required for most guests">
+
+                        <input name="zone" type="hidden" value="$PORTAL_ZONE$">
+
+                        <input name="accept" type="submit" class="btn btn-primary" value="Continue" style="margin:10px">
+
+                        <input type="reset" class="btn btn-primary">
+                    </form>
+                </div>
+                <p class="text-danger">If you are seeing this page in error, please contact: <a href="mailto:email@email.com">email@email.com</a></p>
+            </div>
+        </div>
+    </body>
+</html>
